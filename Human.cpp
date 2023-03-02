@@ -9,7 +9,6 @@ Human::Human() {
     name = "Human";
 };
 
-
 Human::Human(string playerName) {
     name = playerName;
 }; 
