@@ -7,17 +7,21 @@
 using namespace std;
 
 Referee::Referee() {
-    winner = nullptr;
+    
 };  
 
 Player * Referee::refGame(Player * player1, Player * player2) {
-    player1->makeMove();
-    if (player1->move == 'P') {
-        winner = player1;
-        
+
+    c = player1->makeMove(); 
+
+    if (c == 'P') {
+        winner = player1;   
     }
-    else if (player1->move == 'S') {
+    else if (c == 'S') {
         winner = player2;
+    }
+    else if (c == 'R') {
+        winner = nullptr;
     }
     return winner;
 }

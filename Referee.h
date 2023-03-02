@@ -12,6 +12,7 @@ class Referee {
         Referee();
         Player * refGame(Player * player1, Player * player2);
         Player *winner;
+        char c;
 }; 
 
 #endif
