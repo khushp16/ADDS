@@ -12,4 +12,4 @@ class Computer : public Player {
             char makeMove();
 }; 
 
-#endif;
+#endif

@@ -14,4 +14,4 @@ class Referee {
         Player *winner;
 }; 
 
-#endif;
+#endif

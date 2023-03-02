@@ -15,4 +15,4 @@ class Human : public Player {
         char move;
 }; 
 
-#endif;
+#endif
