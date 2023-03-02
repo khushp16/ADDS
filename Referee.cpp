@@ -11,7 +11,7 @@ Referee::Referee() {
 };  
 
 Player * Referee::refGame(Player * player1, Player * player2) {
-
+    player1->makeMove();
     if (player1->move == 'P') {
         winner = player1;
         

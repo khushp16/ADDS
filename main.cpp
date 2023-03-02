@@ -8,13 +8,15 @@ using namespace std;
 int main() {
     
     Human h1;
-    cout << h1.makeMove() << endl;
 
     Computer c1;
-    cout << c1.makeMove() << endl;
 
     Referee r1;
-    cout << r1.refGame(&h1, &c1) << endl;
+
+    Player *p1;
+
+    p1 = r1.refGame(&h1, &c1);
+    cout << p1->getName() << endl;
     
     return 0;
 }
