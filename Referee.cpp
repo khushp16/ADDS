@@ -1,9 +1,6 @@
 #include <iostream>
 #include "Referee.h"
-#include "Human.h"
-#include "Computer.h"
-#include "Player.h"
-#include <string>
+#include <vector>
 using namespace std;
 
 Referee::Referee() {
@@ -12,16 +9,16 @@ Referee::Referee() {
 
 Player * Referee::refGame(Player * player1, Player * player2) {
 
-    c = player1->makeMove(); 
+    player1->makeMove(); 
+    player2->makeMove();
 
-    if (c == 'P') {
-        winner = player1;   
+    for (int i = 0; i < vecSize; i++) {
+        if (player1->winAgainst == player2->loseAgainst) {
+            return player1;
+        } 
+        else if (player1->loseAgainst == player2->winAgainst) {
+            return player2;
+        }
     }
-    else if (c == 'S') {
-        winner = player2;
-    }
-    else if (c == 'R') {
-        winner = nullptr;
-    }
-    return winner;
+
 }

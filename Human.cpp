@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Human.h"
 #include "Player.h"
+#include "Move.h"
 #include <string>
 using namespace std;
 
@@ -9,14 +10,15 @@ Human::Human() {
     name = "Human";
 };
 
+
 Human::Human(string playerName) {
     name = playerName;
 }; 
 
-char Human::makeMove() {
+Move* Human::makeMove() {
     cout << "Enter move: ";
     cin >> move;
-    return move;
+    if ()
 };
 
 string Human::getName() {

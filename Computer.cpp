@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include "Computer.h"
 #include <string>
@@ -6,13 +5,13 @@ using namespace std;
 
 Computer::Computer() {
     name = "Computer";
-    move = 'R';
+    move = "Rock";
 };
 
 string Computer::getName() {
     return name;
 };
 
-char Computer::makeMove() {
+string Computer::makeMove() {
     return move;
 };
