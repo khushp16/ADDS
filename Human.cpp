@@ -5,6 +5,11 @@
 #include "Paper.h"
 #include "Rock.h"
 #include "Scissor.h"
+#include "Pirate.h"
+#include "Zombie.h"
+#include "Ninja.h"
+#include "Robot.h"
+#include "Monkey.h"
 #include <string>
 using namespace std;
 
@@ -38,5 +43,26 @@ Move* Human::makeMove() {
         move = new Scissor;
         return move;
     }
+    else if (move_name == "Pirate") {
+        move = new Pirate;
+        return move;
+    }
+    else if (move_name == "Zombie") {
+        move = new Zombie;
+        return move;
+    }
+    else if (move_name == "Robot") {
+        move = new Robot;
+        return move;
+    }
+    else if (move_name == "Monkey") {
+        move = new Monkey;
+        return move;
+    }
+    else if (move_name == "Ninja") {
+        move = new Ninja;
+        return move;
+    }
+    
     return nullptr;
 };
