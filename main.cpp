@@ -3,6 +3,10 @@
 #include "Computer.h"
 #include "Player.h"
 #include "Human.h"
+#include "Move.h"
+#include "Rock.h"
+#include "Paper.h"
+#include "Scissor.h"
 using namespace std;
 
 int main() {

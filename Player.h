@@ -8,8 +8,9 @@ class Player {
 
     public:
         virtual std::string getName() = 0; 
-        Move * makeMove(); 
+        virtual Move * makeMove() = 0; 
         std::string name;
+        std::string move_name;
         Move * move;
 };
 

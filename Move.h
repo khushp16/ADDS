@@ -5,15 +5,15 @@
 
 class Move {
     protected:
-        vector<std::string> loseAgainst;
-        vector<std::string> winAgainst;
-        std::string moveName;
-
+        std::string win[2];
+        std::string lose[2];
+        std::string move_name;
+        int num;
     public:
         std::string getName();
-        Move * move;
-        int vecSize;
-        
+        int getNum();
+        std::string getWin(int index);
+        std::string getLose(int index);
 };
 
 #endif

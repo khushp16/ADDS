@@ -1,10 +1,13 @@
 #include <iostream>
 #include "Rock.h"
+#include "Move.h"
 #include <string>
 using namespace std;
 
 Rock::Rock () {
-    vector<string> winAgainst = {"Scissor"};
-    vector<string> loseAgainst = {"Paper"};
-    int vecSize = winAgainst.size();
+    win[0] = "Scissor";
+    lose[0] = "Paper";
+    move_name = "Rock";
+    num = 1;
 }
+
