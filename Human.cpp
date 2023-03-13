@@ -4,7 +4,7 @@
 #include "Move.h"
 #include "Paper.h"
 #include "Rock.h"
-#include "Scissor.h"
+#include "Scissors.h"
 #include "Pirate.h"
 #include "Zombie.h"
 #include "Ninja.h"
@@ -39,8 +39,8 @@ Move* Human::makeMove() {
         move = new Rock;
         return move;
     }
-    else if (move_name == "Scissor") {
-        move = new Scissor;
+    else if (move_name == "Scissors") {
+        move = new Scissors;
         return move;
     }
     else if (move_name == "Pirate") {

@@ -1,11 +1,11 @@
 #include <iostream>
-#include "Scissor.h"
+#include "Scissors.h"
 #include "Move.h"
 using namespace std;
 
-Scissor::Scissor() {
+Scissors::Scissors() {
     win[0] = "Paper";
     lose[0] = "Rock";
-    move_name = "Scissor";
+    move_name = "Scissors";
     num = 1;
 }
