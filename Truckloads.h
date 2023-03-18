@@ -1,12 +1,12 @@
 #ifndef TRUCKLOADS_H
 #define TRUCKLOADS_H
+#include <iostream>
 
 class Truckloads {
-    protected: 
+    public:
+        int numTrucks(int numCrates, int loadSize); 
         int numCrates;
         int loadSize;
-    public:
-        int numTrucks(int numCrates, int loadSize);    
 };
 
 #endif
