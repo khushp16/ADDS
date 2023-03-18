@@ -6,7 +6,7 @@ class Truckloads {
         int numCrates;
         int loadSize;
     public:
-        int numTrucks(int numCrates, int loadSize);
+        int numTrucks(int numCrates, int loadSize);    
 };
 
 #endif
