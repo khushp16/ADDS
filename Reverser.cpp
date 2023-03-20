@@ -4,7 +4,9 @@
 using namespace std;
 
 int Reverser::reverseDigit(int value) {
-    
+    if (value < 0) {
+        return -1;
+    }
     if (value <= 9) {
         return value;
     } 
