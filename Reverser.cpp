@@ -5,19 +5,18 @@ using namespace std;
 
 
 int Reverser::reverseDigit(int value) {
-    if (value < 1) {
-        return 0;
-    }
     
-    int reverse = value%10;
+    if (value <= 9) {
+        return value;
+    } 
+    int reverse = value;
     int number = 1;
-
-    while (value/10 >= 1) {
-        value = value/10;
+    int remainder = value%10;
+    while (reverse/10 >= 1) {
+        reverse = reverse/10;
         number = number*10; 
     }
-
-    return (reverse * number) + reverseDigit(value/10);
+    return (remainder * number) + reverseDigit(value/10);
 };
 
 
