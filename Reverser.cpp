@@ -3,7 +3,6 @@
 #include <string>
 using namespace std;
 
-
 int Reverser::reverseDigit(int value) {
     
     if (value <= 9) {
@@ -19,6 +18,14 @@ int Reverser::reverseDigit(int value) {
     return (remainder * number) + reverseDigit(value/10);
 };
 
+string Reverser::reverseString(string characters) {
+    if (characters.size() == 1) {
+        return characters;
+    }
+    char first = characters.at(0);
+    characters.erase(0, 1);
+    return reverseString(characters) + first;
+};
 
 
 
