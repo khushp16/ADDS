@@ -13,6 +13,7 @@ int Reverser::reverseDigit(int value) {
     int reverse = value;
     int number = 1;
     int remainder = value%10;
+    
     while (reverse/10 >= 1) {
         reverse = reverse/10;
         number = number*10; 
