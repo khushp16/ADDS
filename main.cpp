@@ -6,7 +6,7 @@ using namespace std;
 int main() {
     Finder finder;
     string s1 = "4634554567";
-    string s2 = "456899";
+    string s2 = "45689";
     vector<int> result = finder.findSubstrings(s1, s2);
     
     cout << "Results: ";
