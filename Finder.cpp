@@ -11,9 +11,10 @@
             if (found != string::npos) {
                 result.push_back(found);
             } else {
-                result.push_back(-1);
+                break;
             }
         }
+        result.push_back(-1);
         return result;
     }
 
