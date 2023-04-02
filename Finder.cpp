@@ -15,8 +15,10 @@ vector<int> Finder::findSubstrings(string s1, string s2) {
             one += 1;
         } else {
             i = s2.size();
-            for (size_t j = 0; j < s2.size() - one; j++) {
+            size_t j = 0;;
+            while (j < s2.size() - one) {
                 result.push_back(-1);
+                j++;
             }
         }
     }
