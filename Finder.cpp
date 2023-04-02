@@ -13,11 +13,12 @@ vector<int> Finder::findSubstrings(string s1, string s2) {
             index = found;
         } else {
             i = s2.size();
-            for (size_t j = 0; j <= s2.size() - i; j++) {
+            for (size_t j = 0; j <= s2.size() - index; j++) {
                 result.push_back(-1);
             }
         }
     }
     return result;
+}
 
    
