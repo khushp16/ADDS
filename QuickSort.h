@@ -2,9 +2,8 @@
 #define QUICKSORT_H
 #include <iostream>
 #include <vector>
+#include "Sort.h"
 
-class QuickSort {
-    public:
-        
+class QuickSort : public Sort {
 };
 #endif
