@@ -1,5 +1,4 @@
 #include "QuickSort.h"
-#include "Sort.h"
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -19,12 +18,12 @@ vector<int> QuickSort::sort(vector<int> list) {
     vector<int> left_pivot, middle, right_pivot;
 
     for (int i = 0; i < list.size(); i++) {
-        if (list[i] < pivot_point) {
-            left_pivot.push_back(list[i]);
-        } else if (list[i] == pivot_point) {
-            middle.push_back(list[i]);
-        } else if (list[i] > pivot_point){
-            right_pivot.push_back(list[i]);
+        if (list.at(i) < pivot_point) {
+            left_pivot.push_back(list.at(i));
+        } else if (list.at(i) == pivot_point) {
+            middle.push_back(list.at(i));
+        } else if (list.at(i) > pivot_point){
+            right_pivot.push_back(list.at(i));
         }
     }
 

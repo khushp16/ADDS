@@ -6,9 +6,9 @@
 #include <vector>
 using namespace std;
 
-void printVector(vector<int> myVector) {
-    for (int i = 0; i < myVector.size(); i++) {
-        cout << myVector.at(i) << " ";
+void printVector(vector<int> vector) {
+    for (int i = 0; i < vector.size(); i++) {
+        cout << vector.at(i) << " ";
     }
     cout << endl;
 }
