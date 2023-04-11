@@ -18,8 +18,5 @@ int main() {
     vector <int> original = {10,1,3,5,6,7,8};
     vector <int> duplicate = q1.sort(original);
 
-    RecursiveBinarySearch binary;
-    cout << binary.search(duplicate, 1) << endl;
-
     return 0;
 }

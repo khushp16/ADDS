@@ -1,9 +1,10 @@
 #include "BubbleSort.h"
+#include "Sort.h"
 #include <iostream>
 #include <vector>
 using namespace std;
  
-vector<int> Sort::sort(vector<int> list) {
+vector<int> BubbleSort::sort(vector<int> list) {
     for (int i = 0; i < list.size() - 1; i++)
         for (int j = 0; j < list.size() - i - 1; j++) {
             int curr_temp = list.at(j+1);

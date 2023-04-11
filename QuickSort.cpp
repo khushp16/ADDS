@@ -4,7 +4,7 @@
 #include <vector>
 using namespace std;
 
-vector<int> Sort::sort(vector<int> list) {
+vector<int> QuickSort::sort(vector<int> list) {
     
     int pivot_point;
 
