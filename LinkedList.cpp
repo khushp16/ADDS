@@ -1,7 +1,7 @@
 #include "LinkedList.h"
 #include "Node.h"
 #include <iostream>
-#include <limits.h>
+#include <limits>
 using namespace std;
 
 LinkedList::LinkedList()
@@ -36,6 +36,7 @@ LinkedList::~LinkedList() {
         currNode = currNode->link;
         delete temp;
     }  
+    head = nullptr;
 }
 
 Node *LinkedList::traverse(int index)
@@ -47,7 +48,12 @@ Node *LinkedList::traverse(int index)
         currNode = currNode->link;
         position++;
     }
-    return currNode;
+    if (position == index) {
+        return currNode;
+    }
+    else {
+        return nullptr;
+    }
 }
 
 void LinkedList::insertPosition(int pos, int newNum)
