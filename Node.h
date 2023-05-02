@@ -2,11 +2,11 @@
 #define NODE_H
 
 class Node {
+    friend class LinkedList;
     private:
         int data;
         Node* link;
     public:
-        friend class LinkedList;
         Node(int data, Node *link);
 };
 #endif
