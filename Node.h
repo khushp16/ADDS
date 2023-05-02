@@ -1,10 +1,12 @@
 #ifndef NODE_H
 #define NODE_H
-class Node
-{
-public:
-    int data;
-    Node *link;
-    Node(int, Node *);
+
+class Node {
+    private:
+        int data;
+        Node* link;
+    public:
+        friend class LinkedList;
+        Node(int data, Node *link);
 };
 #endif

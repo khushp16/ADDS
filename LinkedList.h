@@ -1,16 +1,21 @@
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
-#include "node.h"
+#include "Node.h"
+
 class LinkedList
 {
-    Node *head;
-
-public:
-    LinkedList();
-    ~LinkedList();
-    void printList();
-    Node *traverse(unsigned int index);
-    void insertAtPosition(int item, unsigned int index);
-    void deleteFromFront();
+    private:
+        Node *head;
+    
+    public:
+        LinkedList();
+        LinkedList(int* array, int len);
+        ~LinkedList();
+        Node *traverse(unsigned int index);
+        void insertPosition(int pos, int newNum);
+        bool deletePosition(int pos);
+        int get(int pos);
+        int search(int target);
+        void printList();
 };
 #endif
