@@ -58,9 +58,10 @@ Node *LinkedList::traverse(int index)
 
 void LinkedList::insertPosition(int pos, int newNum)
 {   
+    Node *currNode = new Node(newNum, nullptr);
     if (pos <= 1 || head == nullptr)
     {
-        head = new Node(newNum, head);
+        head = currNode;
     }
     else
     {
