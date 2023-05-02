@@ -120,7 +120,7 @@ int LinkedList::get(int pos)
 
 int LinkedList::search(int target)
 {
-    int target_count = 0;
+    int target_count = 1;
     Node *targetNode = head;
 
     while (targetNode != nullptr)
