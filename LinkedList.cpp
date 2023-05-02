@@ -36,9 +36,9 @@ LinkedList::~LinkedList() {
     }  
 }
 
-Node *LinkedList::traverse(unsigned int index)
+Node *LinkedList::traverse(int index)
 {
-    unsigned int position = 0;
+    int position = 1;
     Node *currNode = head;
     while (currNode != nullptr && position < index)
     {
@@ -61,7 +61,7 @@ void LinkedList::insertPosition(int pos, int newNum)
         {
             return;
         }
-        Node *newNode = new Node(pos, prevNode->link);
+        Node *newNode = new Node(newNum, prevNode->link);
         prevNode->link = newNode;
     }
 }

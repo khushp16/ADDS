@@ -11,7 +11,7 @@ class LinkedList
         LinkedList();
         LinkedList(int* array, int len);
         ~LinkedList();
-        Node *traverse(unsigned int index);
+        Node *traverse(int index);
         void insertPosition(int pos, int newNum);
         bool deletePosition(int pos);
         int get(int pos);
