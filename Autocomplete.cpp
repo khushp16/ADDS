@@ -4,23 +4,46 @@
 #include <string>
 using namespace std;
 
-Autocomplete::Autocomplete() {
+Autocomplete::Autocomplete()
+{
     root = new Trie();
 }
 
-void Autocomplete::insert(std::string word) {
-    Trie* trie = root;
-    int index = 0;
-    while (index <= word.size()) {
-        if(trie->children[word[index]-'a'] == nullptr) {
-            trie->children[word[index]-'a'] = new Trie();
+void Autocomplete::insert(std::string word)
+{
+    Trie *trie = root;
+    for (int index = 0; index < word.size(); index++)
+    {
+        if (trie->children[word[index] - 'a'] == nullptr)
+        {
+            trie->children[word[index] - 'a'] = new Trie();
         }
-        trie=trie->children[word[index]-'a'];
-        index++;
+        trie = trie->children[word[index] - 'a'];
     }
     trie->isEndOfWord = true;
 }
 
-vector<string> getSuggestions(string partialWord) {
-    
+vector<string> Autocomplete::getSuggestions(string partialWord)
+{
+    vector<string> words;
+    Trie *trie = root;
+    for (int i = 0; i < partialWord.size(); i++)
+    {
+        if (trie->children[partialWord[i] - 'a'] == nullptr)
+        {
+            return words;
+        }
+        trie = trie->children[partialWord[i] - 'a'];
+    }
+    helperFunction(partialWord, words, trie);
+
+    return words;
+}
+
+void Autocomplete::helperFunction(string partialWord, vector<string> words, Trie *trie)
+{
+
+    if (trie->isEndOfWord)
+    {
+    }
 }

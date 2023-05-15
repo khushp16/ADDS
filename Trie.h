@@ -4,6 +4,7 @@
 #include <string>
 #include "Autocomplete.h"
 
+class Autocomplete;
 class Trie {
 private:
     friend class Autocomplete;
