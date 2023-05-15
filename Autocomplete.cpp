@@ -36,14 +36,30 @@ vector<string> Autocomplete::getSuggestions(string partialWord)
         trie = trie->children[partialWord[i] - 'a'];
     }
     helperFunction(partialWord, words, trie);
-
     return words;
 }
 
-void Autocomplete::helperFunction(string partialWord, vector<string> words, Trie *trie)
+void Autocomplete::helperFunction(string &word, vector<string> &words, Trie *trie)
 {
-
     if (trie->isEndOfWord)
     {
+        words.push_back(word);
+    }
+
+    if (trie == nullptr)
+    {
+        return;
+    }
+
+    for (int i = 0; i < 26; i++)
+    {
+        if (trie->children[i] != nullptr)
+        {
+            char letter = 'a' + i;
+            std::string word(1, letter);
+            words.push_back(word);
+            helperFunction(word, words, trie->children[i]);
+            words.pop_back();
+        }
     }
 }
