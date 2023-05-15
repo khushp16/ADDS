@@ -9,22 +9,10 @@ LinkedList::LinkedList()
     head = nullptr;
 }
 
-LinkedList::LinkedList(int *array, int len)
-{
-    if (len <= 0)
-    {
-        head = nullptr;
-        return;
-    }
+LinkedList::LinkedList(int* array, int len) {
     head = nullptr;
-    Node *node = new Node(array[0], nullptr);
-    head = node;
-
-    for (int i = 1; i < len; i++)
-    {
-        Node *curr = new Node(array[i], nullptr);
-        node->link = curr;
-        node = curr;
+    for (int i = 0; i < len; i++) {
+        insertPosition(i+1, array[i]);
     }
 }
 
@@ -56,22 +44,20 @@ Node *LinkedList::traverse(int index)
     }
 }
 
-void LinkedList::insertPosition(int pos, int newNum)
-{   
-    Node *currNode = new Node(newNum, nullptr);
-    if (pos <= 1 || head == nullptr)
-    {
-        head = currNode;
-    }
-    else
-    {
-        Node *prevNode = traverse(pos - 1);
-        if (prevNode == nullptr)
-        {
-            return;
+void LinkedList::insertPosition(int pos, int newNum) {
+    Node* newNode = new Node(newNum, nullptr);
+    if (pos <= 1 || head == nullptr) {
+        newNode->link = head;
+        head = newNode;
+    } else {
+        Node* curr = head;
+        int count = 1;
+        while (count < pos - 1 && curr->link != nullptr) {
+            curr = curr->link;
+            count++;
         }
-        Node *newNode = new Node(newNum, prevNode->link);
-        prevNode->link = newNode;
+        newNode->link = curr->link;
+        curr->link = newNode;
     }
 }
 
