@@ -39,7 +39,7 @@ vector<string> Autocomplete::getSuggestions(string partialWord)
     return words;
 }
 
-void Autocomplete::helperFunction(std::string& letter, std::vector<std::string>& completedVector, Trie* iteration) {
+void Autocomplete::helperFunction(string& letter, vector<string>& completedVector, Trie* iteration) {
     if (iteration == nullptr) {
         return;
     }

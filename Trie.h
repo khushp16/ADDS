@@ -5,9 +5,10 @@
 #include "Autocomplete.h"
 
 class Autocomplete;
+
 class Trie {
-private:
     friend class Autocomplete;
+private:
     Trie *children[26];
     bool isEndOfWord;
 public:

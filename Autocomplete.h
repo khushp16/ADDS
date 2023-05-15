@@ -16,5 +16,4 @@ class Autocomplete {
         std::vector<std::string> getSuggestions(std::string partialWord);
         void helperFunction(std::string& partialWord, std::vector<std::string>& words, Trie *trie);
 };
-
 #endif
