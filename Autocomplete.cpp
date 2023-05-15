@@ -12,7 +12,7 @@ Autocomplete::Autocomplete()
 void Autocomplete::insert(std::string word)
 {
     Trie *trie = root;
-    for (int index = 0; index < word.size(); index++)
+    for (int index = 0; index < word.length(); index++)
     {
         if (trie->children[word[index] - 'a'] == nullptr)
         {
