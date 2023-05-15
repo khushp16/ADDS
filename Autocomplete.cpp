@@ -39,21 +39,21 @@ vector<string> Autocomplete::getSuggestions(string partialWord)
     return words;
 }
 
-void Autocomplete::helperFunction(std::string& prefix, std::vector<std::string>& suggestions, Trie* node) {
-    if (node == nullptr) {
+void Autocomplete::helperFunction(std::string& letter, std::vector<std::string>& completedVector, Trie* iteration) {
+    if (iteration == nullptr) {
         return;
     }
 
-    if (node->isEndOfWord) {
-        suggestions.push_back(prefix);
+    if (iteration->isEndOfWord) {
+        completedVector.push_back(letter);
     }
 
     for (int i = 0; i < 26; i++) {
-        if (node->children[i] != nullptr) {
-            char c = 'a' + i;
-            prefix.push_back(c);
-            helperFunction(prefix, suggestions, node->children[i]);
-            prefix.pop_back();
+        if (iteration->children[i] != nullptr) {
+            char character = 'a' + i;
+            letter.push_back(character);
+            helperFunction(letter, completedVector, iteration->children[i]);
+            letter.pop_back();
         }
     }
 }
