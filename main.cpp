@@ -11,12 +11,12 @@ int main()
     v.push_back(30);
     v.push_back(4);
     v.push_back(5);
+
     Heap<int> heap(v);
+
     heap.insert(0);
     heap.print_heap();
-    /*
-    cout << "insert 10"<< endl;
-    cout << "min: "<<heap.getMin()<< endl;
-    */
+    heap.remove(2);
+    heap.print_heap();
     return 0;
 }

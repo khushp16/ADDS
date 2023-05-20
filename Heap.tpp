@@ -19,7 +19,7 @@ public:
   // the type T MUST provide comparison operators <, >, ==
   Heap(std::vector<T>);
   void print_heap();
-
+  int kth_largest(vector<int> values, int k);
   void insert(T);
   void remove(T);
   T getMin();
@@ -77,7 +77,19 @@ void Heap<T>::insert(T value)
 template <typename T>
 void Heap<T>::remove(T value)
 {
-  // TO BE IMPLEMENTED
+  int index;
+  for (int i = 0; i < values.size(); i++)
+  {
+    if (values[i] == value)
+    {
+      index = i;
+      break;
+    }
+  }
+  values[index] = values[values.size() - 1];
+  values.pop_back();
+
+  heapify(index);
 }
 
 /*******************************/
@@ -135,6 +147,10 @@ void Heap<T>::heapify(int parent_index)
     // further down the 'tree'
     heapify(index_of_smallest);
   }
+}
+template <typename T>
+int kth_largest(vector<int> values, int k) {
+
 }
 
 template <typename T>
