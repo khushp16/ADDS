@@ -19,7 +19,6 @@ public:
   // the type T MUST provide comparison operators <, >, ==
   Heap(std::vector<T>);
   void print_heap();
-  int kth_largest(vector<int> values, int k);
   void insert(T);
   void remove(T);
   T getMin();
@@ -150,7 +149,7 @@ void Heap<T>::heapify(int parent_index)
 }
 template <typename T>
 int kth_largest(vector<int> values, int k) {
-
+    return values[0]; 
 }
 
 template <typename T>
