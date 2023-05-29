@@ -11,7 +11,15 @@ void DocumentManager::addPatron(int patronID) {
     patrons.insert(patronID);
 };
 
-int search(string name);
+int DocumentManager::search(string name) {
+    for (const auto& pair : documents) {
+        if (pair.second.first == name) {
+            return pair.first;
+        }
+    }
+    return 0;
+}
+
 
 bool borrowDocument(int docid, int patronID); 
 
