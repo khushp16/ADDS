@@ -79,7 +79,7 @@ void Heap<T>::remove(T value)
   int index;
   for (int i = 0; i < values.size(); i++)
   {
-    if (values[i] == value)
+    if (values.at(i) == value)
     {
       index = i;
       break;
