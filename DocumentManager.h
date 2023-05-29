@@ -13,11 +13,11 @@ class DocumentManager
         std::unordered_set<int> patrons; 
         
     public:
-        void addDocument(std::string& name, int id, int license_limit);
+        void addDocument(std::string name, int id, int license_limit);
 
         void addPatron(int patronID);
 
-        int search(std::string& name);
+        int search(std::string name);
 
         bool borrowDocument(int docid, int patronID);
 
